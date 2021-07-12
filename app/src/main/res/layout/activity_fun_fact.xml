@@ -6,17 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".FunFact">
 
-    <ImageView
-        android:id="@+id/factimage"
-        android:layout_width="414dp"
-        android:layout_height="299dp"
-        android:background="#7E57C2"
-        android:backgroundTint="#7E57C2"
-        android:scaleType="fitXY"
+    <TextView
+        android:id="@+id/funfactheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@color/app_color"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="THE FUN FACTS"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/factimage"
+        android:layout_width="match_parent"
+        android:layout_height="299dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="10dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/funfactheader"
         app:srcCompat="@drawable/india" />
 
     <TextView
@@ -24,10 +44,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/bangers"
+        android:fontFamily="@font/montserrat"
         android:padding="10dp"
         android:text="City Name"
-        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        android:gravity="start"
         android:textColor="?android:attr/textColorPrimary"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -40,10 +61,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/average_sans"
+        android:fontFamily="@font/montserrat"
         android:padding="10dp"
+        android:gravity="start"
         android:text="City Fact Info"
         android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/citynameView" />
@@ -55,8 +78,9 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:contentDescription="next"
+        app:tint="@color/white"
         android:src="@android:drawable/ic_media_next"
-        app:backgroundTint="#7E57C2"
+        android:backgroundTint="@color/app_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
